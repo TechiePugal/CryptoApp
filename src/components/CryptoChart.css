@@ -1,0 +1,265 @@
+/* Full-screen container */
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Modern font */
+    background: linear-gradient(135deg, #2c2c54, #24243e); /* Dark gradient background */
+    color: #f0f0f0; /* Light text for dark mode */
+}
+
+/* Main chart container */
+.crypto-chart-container {
+    max-width: 1200px; /* Limit the width */
+    margin: 30px auto; /* Center the container */
+    padding: 30px; /* Spacious padding */
+    background-color: #33334d; /* Dark background for the chart section */
+    border-radius: 15px; /* Rounded corners for modern look */
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5); /* Deeper shadow for depth */
+}
+
+/* Crypto information section */
+.crypto-info {
+    background-color: #3a3a5c; /* Dark background */
+    border: 1px solid #444; /* Darker border */
+    border-radius: 10px; /* Rounded corners */
+    padding: 25px; /* Generous padding */
+    margin-bottom: 30px; /* Spacing between sections */
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.3); /* Subtle shadow */
+}
+
+/* Title styles */
+h1 {
+    text-align: center;
+    color: #ffffff; /* Light text color */
+    font-size: 2.8em; /* Large font size for title */
+    margin-bottom: 20px; /* Space below the title */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Slight text shadow */
+}
+
+h2 {
+    color: #1e90ff; /* Bright blue for headings */
+    font-size: 1.8em; /* Slightly larger for subheadings */
+}
+
+.price {
+    font-weight: bold;
+    color: #66ff66; /* Bright green for price */
+}
+
+.market-cap, .volume {
+    color: #ccc; /* Light grey for market cap and volume */
+}
+
+h3 {
+    margin-top: 30px; /* Extra space above subsections */
+    color: #e0e0e0;
+    font-size: 1.6em; /* Increased size for subsection titles */
+    border-bottom: 2px solid #1e90ff; /* Bright blue underline */
+    padding-bottom: 10px; /* Space below heading */
+}
+
+/* Price table styling */
+.price-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px; /* Space above the table */
+}
+
+.price-table th, .price-table td {
+    border: 1px solid #555; /* Darker border */
+    padding: 15px; /* Generous padding */
+    text-align: center;
+    font-size: 1.1em; /* Readable font size */
+    transition: background-color 0.3s ease; /* Smooth background transition */
+}
+
+.price-table th {
+    background-color: #1e90ff; /* Bright blue header */
+    color: #ffffff; /* White text */
+}
+
+.price-table tr:nth-child(even) {
+    background-color: #444; /* Darker grey for even rows */
+}
+
+.price-table tr:hover {
+    background-color: rgba(30, 144, 255, 0.2); /* Light hover effect */
+}
+
+/* Chart container and layout */
+.chart-container {
+    display: flex;
+    justify-content: space-between; /* Space between charts */
+    flex-wrap: wrap; /* Allows wrapping on smaller screens */
+    margin-top: 30px; /* Space above the chart section */
+}
+
+.chart {
+    flex: 1; /* Allow equal width for each chart */
+    margin: 10px; /* Space around each chart */
+    min-width: 350px; /* Minimum width for smaller charts */
+    max-width: 500px; /* Maximum width for larger screens */
+    border-radius: 10px; /* Rounded corners for chart boxes */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Light shadow */
+    background-color: #3a3a5c; /* Dark background */
+    padding: 20px; /* Padding inside the chart */
+    transition: transform 0.3s ease; /* Smooth scale transition */
+}
+
+.chart:hover {
+    transform: scale(1.03); /* Slightly enlarge on hover */
+}
+
+/* Date filter styling */
+.date-filter {
+    display: flex;
+    justify-content: center; /* Center the date filter */
+    gap: 20px; /* Space between inputs */
+    margin-bottom: 20px; /* Space below the date filter */
+}
+
+.date-filter select {
+    padding: 10px; /* Padding for select */
+    border: 1px solid #555; /* Darker border */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 1em; /* Font size */
+    background-color: #444; /* Dark background */
+    color: #fff; /* Light text */
+}
+
+.date-filter button {
+    padding: 10px 15px; /* Padding for the button */
+    background-color: #1e90ff; /* Primary blue color */
+    color: white; /* White text */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor */
+    transition: background-color 0.3s ease; /* Smooth background change */
+}
+
+.date-filter button:hover {
+    background-color: #006bb3; /* Darker blue on hover */
+}
+
+/* Header styling for charts */
+.chart h4 {
+    text-align: center; /* Center the chart header */
+    color: #f0f0f0; /* Light text */
+    margin-bottom: 10px; /* Space below the header */
+    font-size: 1.5em; /* Larger header size */
+}
+
+/* Select Cryptocurrency input styling */
+.select-crypto {
+    padding: 10px; /* Padding for the select input */
+    border: 1px solid #555; /* Darker border */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 1em; /* Font size */
+    background-color: #444; /* Dark background */
+    color: #fff; /* Light text */
+    width: 200px; /* Width for the select input */
+    transition: background-color 0.3s ease; /* Smooth background change */
+}
+
+.select-crypto:hover {
+    background-color: #555; /* Slightly lighter on hover */
+}
+
+.select-crypto:focus {
+    outline: none; /* Remove default outline */
+    border-color: #1e90ff; /* Change border color on focus */
+    background-color: #555; /* Darker background on focus */
+}
+
+/* Styling for the label */
+.select-crypto-label {
+    display: block; /* Block display for label */
+    margin-bottom: 10px; /* Space below the label */
+    color: #f0f0f0; /* Light text color */
+    font-size: 1.2em; /* Larger font size for label */
+    text-align: center; /* Center the label */
+}
+
+/* Responsive adjustments for mobile and tablet */
+@media (max-width: 1200px) {
+    .crypto-chart-container {
+        max-width: 100%;
+        padding: 20px; /* Reduce padding on medium screens */
+    }
+
+    .chart {
+        margin: 10px 0; /* Less margin for medium screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .chart-container {
+        flex-direction: column; /* Stack charts vertically */
+        align-items: center; /* Center the charts */
+    }
+
+    .chart {
+        max-width: 100%; /* Full width on mobile */
+        margin-bottom: 20px; /* Space below each chart */
+    }
+
+    h1 {
+        font-size: 2.2em; /* Adjust font size for mobile */
+    }
+
+    h2 {
+        font-size: 1.6em; /* Adjust font size for mobile */
+    }
+
+    h3 {
+        font-size: 1.3em; /* Adjust font size for mobile */
+    }
+}
+.crypto-chart-footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #f1f1f1;
+    margin-top: 40px;
+  }
+  
+  .crypto-chart-footer p {
+    margin: 5px 0;
+    font-size: 14px;
+    color: #333;
+  }
+  
+  .crypto-chart-footer a {
+    color: #0073b1;
+    text-decoration: none;
+  }
+  
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.8em; /* Smaller font size for small screens */
+    }
+
+    h2 {
+        font-size: 1.4em; /* Smaller subheading size */
+    }
+
+    .chart {
+        padding: 15px; /* Reduce padding for small screens */
+    }
+
+    .price-table th, .price-table td {
+        padding: 10px; /* Reduce table cell padding */
+    }
+
+    .date-filter {
+        flex-direction: column; /* Stack date filters on small screens */
+        gap: 10px; /* Smaller gap */
+    }
+
+    .select-crypto {
+        width: 100%; /* Full width for select on small screens */
+    }
+
+    .date-filter button {
+        width: 100%; /* Full width for button */
+    }
+}
